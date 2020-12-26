@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">-->
+<web-app version="2.4" 
+    xmlns="http://java.sun.com/xml/ns/j2ee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+        http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <display-name>FileUploadAndDownLoad</display-name>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>UploadHandleServlet</servlet-name>
+    <servlet-class>me.gacl.web.controller.UploadHandleServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UploadHandleServlet</servlet-name>
+    <url-pattern>/servlet/UploadHandleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+     <servlet-name>ListFileServlet</servlet-name>
+     <servlet-class>me.gacl.web.controller.ListFileServlet</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+     <servlet-name>ListFileServlet</servlet-name>
+    <url-pattern>/servlet/ListFileServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+      <servlet-name>DownLoadServlet</servlet-name>
+      <servlet-class>me.gacl.web.controller.DownLoadServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+      <servlet-name>DownLoadServlet</servlet-name>
+      <url-pattern>/servlet/DownLoadServlet</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+      <servlet-name>DownLoadHandleServlet</servlet-name>
+      <servlet-class>me.gacl.web.controller.DownLoadHandleServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+      <servlet-name>DownLoadHandleServlet</servlet-name>
+      <url-pattern>/servlet/DownLoadHandleServlet</url-pattern>
+</servlet-mapping>
+  
+  <jsp-config>  
+        <taglib>  
+            <taglib-uri>http://java.sun.com/jstl/core</taglib-uri>  
+            <taglib-location>/WEB-INF/c.tld</taglib-location>  
+        </taglib>      
+    </jsp-config> 
+</web-app>
